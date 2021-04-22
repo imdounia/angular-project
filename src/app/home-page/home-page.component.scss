@@ -1,0 +1,18 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #a67db8;
+}
+.banner{
+    background-image: linear-gradient(to bottom, #a67db8, #d993ad, #f0b6ac, #f7dcc2);
+    padding: 0 5rem;
+}
+.banner img{
+    width: 550px;
+}
+.banner .site-title{
+    color: #ffffea;
+    letter-spacing: 8px;
+    padding-top: 8rem;
+}

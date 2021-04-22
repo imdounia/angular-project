@@ -1,0 +1,15 @@
+{{ songs$ | async | json }}
+
+hello
+<div *ngFor="let song of songs$ | async">
+    <h3>{{song.videourl | safe}}</h3>
+    
+    
+
+  
+  
+  </div>
+
+<button mat-fab color="warn" (click)="openDialog(false, undefined)">
+    <mat-icon>add</mat-icon>
+  </button>
