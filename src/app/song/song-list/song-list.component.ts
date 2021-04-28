@@ -15,8 +15,20 @@ import { SongFormComponent } from '../song-form/song-form.component';
 export class SongListComponent implements OnInit {
   
   songs$ : Observable<Song[]>;
+  mediaItems: any;
+  
 
-  constructor(private _songService: SongService, public dialog: MatDialog, private sanitizer: DomSanitizer) { }
+  constructor(private _songService: SongService, public dialog: MatDialog, public sanitizer: DomSanitizer) {}
+
+
+  photoURL() {
+    return this.sanitizer.bypassSecurityTrustUrl(this.mediaItems[1].url);
+  }
+  public youtube_parser(url){
+    const regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
+    const match = url.match(regExp);
+    return (match&&match[7].length==11)? match[7] : false;
+}
 
 
   ngOnInit(): void {
