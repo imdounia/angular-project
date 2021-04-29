@@ -1,9 +1,6 @@
 html{
     scroll-behavior: smooth;
 }
-body{
-    background-color: #a67db8;
-}
 
 /*banner section*/
 .banner{
@@ -26,11 +23,32 @@ body{
 
 /*genres section*/
 .genres{
-    padding: 2rem;
+    padding: 6rem;
+    text-align: center;
+    background-color: #f7dcc2;
 }
 .genres .genre{
     background-color: #d993ad;
-    margin: 0.5rem 0;
+    margin: 3rem 2rem;
+    padding: 1rem;
+    box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.30), 0 10px 20px 0 rgba(0, 0, 0, 0.30);
+    border-radius: 20px;
+    transition: transform 0.5s;
+    transition: 0.3s;
+}
+.genres .genre p{
+    line-height: 30px;
+}
+.genres .genre:hover{
+    background-color: #c09ba9;
+    transform: scale(1.1);    
+}
+.genres img{
+    width: 200px;
+    height: 200px; 
+    object-fit: cover;
+    filter: grayscale(50%);
+    border-radius: 5%;
 }
 
 

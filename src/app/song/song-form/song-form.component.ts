@@ -27,7 +27,7 @@ export class SongFormComponent implements OnInit {
     private _dialogRef: MatDialogRef<SongFormComponent>,
     @Inject(MAT_DIALOG_DATA) public data: SongFormData
   ) {
-    this.formAction = data.toUpdate? "Modifier" : "Ajouter";
+    this.formAction = data.toUpdate? "Update" : "Add";
 
     if (data.toUpdate) {
       this.songForm = this.fb.group({

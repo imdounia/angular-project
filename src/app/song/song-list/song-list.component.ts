@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { DomSanitizer } from '@angular/platform-browser';
 import { Observable } from 'rxjs';
 import { SongFormData } from 'src/app/core/models/song-form-data';
 import { SongService } from 'src/app/core/services/http/song.service';
@@ -15,16 +14,13 @@ import { SongFormComponent } from '../song-form/song-form.component';
 export class SongListComponent implements OnInit {
   
   songs$ : Observable<Song[]>;
-  mediaItems: any;
   
 
-  constructor(private _songService: SongService, public dialog: MatDialog, public sanitizer: DomSanitizer) {}
+  constructor(private _songService: SongService, public dialog: MatDialog) {}
 
 
-  photoURL() {
-    return this.sanitizer.bypassSecurityTrustUrl(this.mediaItems[1].url);
-  }
-  public youtube_parser(url){
+  
+  public youtube_parser(url: string){
     const regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
     const match = url.match(regExp);
     return (match&&match[7].length==11)? match[7] : false;

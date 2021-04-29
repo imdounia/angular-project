@@ -1,15 +1,24 @@
 {{ songs$ | async | json }}
 
+<section class="songs">
 <div *ngFor="let song of songs$ | async">
-    <h3>{{(song.name)}}</h3>
-    <p>{{(song.artist)}}</p>
-    <p>Check for the MV <a target="_blank" href="{{song.videourl}}">here</a></p>
-  <img [src]="'{{song.videourl | safe}}'">
+
+    <!--<iframe width="560" height="315" [src]="'https://www.youtube.com/embed/ + {{youtube_parser(song.videourl | safe)}}'" allowfullscreen></iframe>-->
+    
+          <div class="song">
+          <span class="text-uppercase">{{song.name}}</span>
+          <span>{{song.artist}}</span>
+              <button
+              mat-icon-button
+              (click)="openDialog(true, student)"><mat-icon>edit</mat-icon></button>
+          </div>
   
+
+  
+
   </div>
-  
-  
+</section>
+
 <button mat-fab color="warn" (click)="openDialog(false, undefined)">
     <mat-icon>add</mat-icon>
   </button>
-  <img src="https://i.pinimg.com/originals/8d/ec/64/8dec648431dee9a323679661ff435bf3.gif" />
