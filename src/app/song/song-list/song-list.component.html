@@ -14,6 +14,12 @@
   <ng-container matColumnDef="actions">
     <th mat-header-cell *matHeaderCellDef style="text-align:right;">Actions</th>
     <td mat-cell *matCellDef="let song" style="text-align:right;">
+      <button [routerLink]="['./',song.id]"
+        mat-icon-button
+      >
+      <img width="20px" src="data:image/svg+xml;base64,PHN2ZyBpZD0iQ29sb3IiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDI0IDI0IiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDI0IDI0IiB3aWR0aD0iNTEyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Im0yMi4yNSAwaC0yMC41Yy0uOTY1IDAtMS43NS43ODUtMS43NSAxLjc1djIuNWMwIC45NjUuNzg1IDEuNzUgMS43NSAxLjc1aDIwLjVjLjk2NSAwIDEuNzUtLjc4NSAxLjc1LTEuNzV2LTIuNWMwLS45NjUtLjc4NS0xLjc1LTEuNzUtMS43NXoiIGZpbGw9IiMwM2E5ZjQiLz48cGF0aCBkPSJtMTIgMGgtMTAuMjVjLS45NjUgMC0xLjc1Ljc4NS0xLjc1IDEuNzV2Mi41YzAgLjk2NS43ODUgMS43NSAxLjc1IDEuNzVoMTAuMjV6IiBmaWxsPSIjMDM5M2Q0Ii8+PHBhdGggZD0ibTIyLjI1IDE4aC0yMC41Yy0uOTY1IDAtMS43NS43ODUtMS43NSAxLjc1djIuNWMwIC45NjUuNzg1IDEuNzUgMS43NSAxLjc1aDIwLjVjLjk2NSAwIDEuNzUtLjc4NSAxLjc1LTEuNzV2LTIuNWMwLS45NjUtLjc4NS0xLjc1LTEuNzUtMS43NXoiIGZpbGw9IiNjZmQ4ZGMiLz48cGF0aCBkPSJtLjc1IDExLjVoMTQuNWMuNDE0IDAgLjc1LS4zMzYuNzUtLjc1cy0uMzM2LS43NS0uNzUtLjc1aC0xNC41Yy0uNDE0IDAtLjc1LjMzNi0uNzUuNzVzLjMzNi43NS43NS43NXoiIGZpbGw9IiM5MGE0YWUiLz48cGF0aCBkPSJtLjc1IDE0LjVoMTQuNWMuNDE0IDAgLjc1LS4zMzYuNzUtLjc1cy0uMzM2LS43NS0uNzUtLjc1aC0xNC41Yy0uNDE0IDAtLjc1LjMzNi0uNzUuNzVzLjMzNi43NS43NS43NXoiIGZpbGw9IiM5MGE0YWUiLz48Y2lyY2xlIGN4PSIyMSIgY3k9IjEyIiBmaWxsPSIjY2ZkOGRjIiByPSIzIi8+PHBhdGggZD0ibTEyIDE4aC0xMC4yNWMtLjk2NSAwLTEuNzUuNzg1LTEuNzUgMS43NXYyLjVjMCAuOTY1Ljc4NSAxLjc1IDEuNzUgMS43NWgxMC4yNXoiIGZpbGw9IiNiNGJjYzAiLz48cGF0aCBkPSJtOCAxMGgtNy4yNWMtLjQxNCAwLS43NS4zMzYtLjc1Ljc1cy4zMzYuNzUuNzUuNzVoNy4yNXoiIGZpbGw9IiM3ZDhmOTciLz48cGF0aCBkPSJtOCAxM2gtNy4yNWMtLjQxNCAwLS43NS4zMzYtLjc1Ljc1cy4zMzYuNzUuNzUuNzVoNy4yNXoiIGZpbGw9IiM3ZDhmOTciLz48cGF0aCBkPSJtMjEgOWMtMS42NTQgMC0zIDEuMzQ2LTMgM3MxLjM0NiAzIDMgM3oiIGZpbGw9IiNiNGJjYzAiLz48L3N2Zz4=" />
+      </button>
+
       <button
         mat-icon-button
         (click)="openDialog(true, song)"
@@ -32,7 +38,6 @@
 
 
 
-  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
 </table>
 

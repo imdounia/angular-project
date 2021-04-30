@@ -1,5 +1,5 @@
 <form [formGroup]="songForm" (ngSubmit)="onSubmit(songForm.value)">
-    <h2 mat-dialog-title>Song FORM</h2>
+    <h2 mat-dialog-title style="text-align: center;">Song</h2>
     <mat-dialog-content class="mat-typography">
             <div>
                 <mat-form-field appearance="fill">
@@ -35,7 +35,7 @@
     
     
     </mat-dialog-content>
-    {{songForm.valid}}
+    
     <mat-dialog-actions align="end">
       <button mat-button mat-dialog-close>Cancel</button>
       <button mat-button type="submit" cdkFocusInitial [disabled]="!songForm.valid">{{formAction}}</button>

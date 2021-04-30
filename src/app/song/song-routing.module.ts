@@ -8,14 +8,19 @@ import { SongComponent } from './song.component';
 const routes: Routes = [
   {
     path: '',
-    component: SongListComponent,
+    component: SongComponent,
     children: [
+      {
+        path: '',
+        pathMatch: 'full',
+        redirectTo: ""
+      },
       {
         path: 'songs',
         component: SongListComponent
       },
       {
-        path: 'songs/:id',
+        path: ':id',
         component: SongDetailComponent
       },
       {
