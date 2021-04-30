@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  songEndpoint: 'https://mywebsitee.herokuapp.com/songs'
+  songEndpoint: 'http://localhost:3000/songs'
 };

@@ -18,7 +18,10 @@ export class SongFormComponent implements OnInit {
 
   genres: string[] = [
     'K-POP',
-    'K-HIPHOP'
+    'K-HIP HOP',
+    'KOREAN BALLAD',
+    'SINAWI',
+    'KOREAN ROCK'
   ]
 
   constructor(
@@ -57,13 +60,13 @@ export class SongFormComponent implements OnInit {
       if (this.data.toUpdate) {
         song.id = this.data.song.id;
         this._songService.put(song).subscribe((next) => {
-          console.log("YES WE DID IT !!! WE HAVE updated A song");
+          console.log("dang bro WE HAVE updated A SONG");
           this.songForm.reset();
           this._dialogRef.close();
         })
       } else {
         this._songService.post(song).subscribe((next) => {
-          console.log("YES WE DID IT !!! WE HAVE ADDED A NEW song");
+          console.log("hell yes dude WE HAVE ADDED A NEW SONG");
           this.songForm.reset();
           this._dialogRef.close();
         })
