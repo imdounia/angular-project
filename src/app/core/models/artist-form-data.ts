@@ -1,7 +1,7 @@
 import { Artist } from "./artist";
 
 
-export interface SongFormData {
+export interface ArtistFormData {
     toUpdate: boolean;
     artist: Artist;
 }
