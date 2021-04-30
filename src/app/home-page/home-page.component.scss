@@ -48,6 +48,16 @@
 }
 
 
+/*mine section*/
+.mine{
+    padding: 5rem;
+    text-align: center;
+    background-color: #f7dcc2;
+}
+.mine audio{
+    text-align: center;
+}
+
   /*equal rows*/
   .row.equal-cols {
     display: -webkit-flex;
@@ -82,7 +92,7 @@
 
   @media only screen and (max-width: 425px){
     
-    .genres, .banner{
+    .genres, .banner,.mine{
         padding: 1rem;
         
     }
