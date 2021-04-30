@@ -1,11 +1,35 @@
+body{
+    background-color: #f7dcc2;
+}
 .songs{
-    text-align: center;
-    padding: 0 6rem;
+    padding: 6rem;
+    background-image: linear-gradient(to bottom, #a67db8, #d993ad, #f0b6ac, #f7dcc2);
+}
+.songs .add{
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 20px;
+    background-color: #d993ad;
+    box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.30), 0 10px 20px 0 rgba(0, 0, 0, 0.30);
+    border: white 1px;
+}
+/*.songs > div{
+    display: flex;
+}
+.songs .actions{
+    text-align: right;
+    right: 0;
 }
 .songs .song{
     background-color: #d993ad;
     margin: 3rem 2rem;
-    padding: 1rem;
+    padding: 0.5rem 1rem;
     box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.30), 0 10px 20px 0 rgba(0, 0, 0, 0.30);
     border-radius: 20px;
     transition: transform 0.5s;
@@ -14,4 +38,4 @@
 .songs .song:hover{
     background-color: #c09ba9;
     transform: scale(1.1);    
-}
+}*/

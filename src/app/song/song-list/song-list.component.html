@@ -1,24 +1,51 @@
-{{ songs$ | async | json }}
-
 <section class="songs">
-<div *ngFor="let song of songs$ | async">
+<table mat-table [dataSource]="songs$ | async" class="mat-elevation-z8">
 
-    <!--<iframe width="560" height="315" [src]="'https://www.youtube.com/embed/ + {{youtube_parser(song.videourl | safe)}}'" allowfullscreen></iframe>-->
-    
-          <div class="song">
-          <span class="text-uppercase">{{song.name}}</span>
-          <span>{{song.artist}}</span>
-              <button
-              mat-icon-button
-              (click)="openDialog(true, student)"><mat-icon>edit</mat-icon></button>
-          </div>
-  
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef>Name</th>
+    <td mat-cell *matCellDef="let song">{{ song.name }}</td>
+  </ng-container>
 
-  
+  <ng-container matColumnDef="artist">
+    <th mat-header-cell *matHeaderCellDef>Artist</th>
+    <td mat-cell *matCellDef="let song">{{ song.artist }}</td>
+  </ng-container>
 
-  </div>
-</section>
+  <ng-container matColumnDef="actions">
+    <th mat-header-cell *matHeaderCellDef style="text-align:right;">Actions</th>
+    <td mat-cell *matCellDef="let song" style="text-align:right;">
+      <button
+        mat-icon-button
+        (click)="openDialog(true, song)"
+      >
+        <img width="20px" src="data:image/png;base64,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" />
+      </button>
 
-<button mat-fab color="warn" (click)="openDialog(false, undefined)">
+      <button
+        mat-icon-button
+        (click)="delete(song)"
+      >
+        <img width="20px" src="data:image/png;base64,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" />
+      </button>
+    </td>
+  </ng-container>
+
+
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+</table>
+
+
+
+
+<button class="add" mat-fab color="warn" (click)="openDialog(false, undefined)">
     <mat-icon>add</mat-icon>
   </button>
+
+</section>
+
+
+
+
+

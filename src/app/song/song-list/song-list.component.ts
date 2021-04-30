@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Observable } from 'rxjs';
 import { SongFormData } from 'src/app/core/models/song-form-data';
@@ -14,11 +14,13 @@ import { SongFormComponent } from '../song-form/song-form.component';
 export class SongListComponent implements OnInit {
   
   songs$ : Observable<Song[]>;
-  
+  displayedColumns: string[] = ["name", "artist", "actions"];
 
-  constructor(private _songService: SongService, public dialog: MatDialog) {}
+  constructor(private _songService: SongService, public dialog: MatDialog, private elementRef: ElementRef) {}
 
-
+  ngAfterViewInit(){
+    this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#f7dcc2';
+ }
   
   public youtube_parser(url: string){
     const regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
