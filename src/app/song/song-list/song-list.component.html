@@ -3,7 +3,7 @@
 
   <ng-container matColumnDef="name">
     <th mat-header-cell *matHeaderCellDef>Name</th>
-    <td mat-cell *matCellDef="let song">{{ song.name }}</td>
+    <td mat-cell *matCellDef="let song" style="font-weight:bolder;">{{ song.name }}</td>
   </ng-container>
 
   <ng-container matColumnDef="artist">
@@ -39,7 +39,7 @@
 
 
 
-<button class="add" mat-fab color="warn" (click)="openDialog(false, undefined)">
+<button id="add" mat-fab color="#a67db8" (click)="openDialog(false, undefined)">
     <mat-icon>add</mat-icon>
   </button>
 

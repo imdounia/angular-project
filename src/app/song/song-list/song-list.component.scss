@@ -1,11 +1,8 @@
-body{
-    background-color: #f7dcc2;
-}
 .songs{
     padding: 6rem;
     background-image: linear-gradient(to bottom, #a67db8, #d993ad, #f0b6ac, #f7dcc2);
 }
-.songs .add{
+.songs #add{
     position: fixed;
     right: 30px;
     bottom: 30px;
@@ -17,7 +14,14 @@ table{
     border-radius: 20px;
     background-color: #d993ad;
     box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.30), 0 10px 20px 0 rgba(0, 0, 0, 0.30);
-    border: white 1px;
+}
+table tr{
+    transition: transform 0.5s;
+    transition: 0.3s;
+}
+table tr:hover{
+    background-color: #c09ba9;
+    transform: scale(1.02);
 }
 /*.songs > div{
     display: flex;
