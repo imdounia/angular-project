@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  songEndpoint: 'http://localhost:3000/songs',
-  artistEndpoint: 'http://localhost:3000/artists'
+  songEndpoint: 'https://mywebsitee.herokuapp.com/songs',
+  artistEndpoint: 'https://mywebsitee.herokuapp.com/artists'
 };
 /*
  * For easier debugging in development mode, you can import the following file

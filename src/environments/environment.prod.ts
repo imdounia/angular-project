@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
-  songEndpoint: 'http://localhost:3000/songs',
-  artistEndpoint: 'http://localhost:3000/artists'
+  songEndpoint: 'https://mywebsitee.herokuapp.com/songs',
+  artistEndpoint: 'https://mywebsitee.herokuapp.com/artists'
 };
