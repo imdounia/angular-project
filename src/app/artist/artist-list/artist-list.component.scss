@@ -23,3 +23,12 @@
     background-color: #c09ba9;
     transform: scale(1.1);    
 }
+
+
+@media only screen and (max-width: 425px){
+    
+    .artists{
+        padding: 1rem;
+        
+    }
+}

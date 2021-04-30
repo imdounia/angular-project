@@ -1,7 +1,3 @@
-html{
-    scroll-behavior: smooth;
-}
-
 /*banner section*/
 .banner{
     background-image: linear-gradient(to bottom, #a67db8, #d993ad, #f0b6ac, #f7dcc2);
@@ -81,3 +77,17 @@ html{
     -ms-flex: 1 1 auto;
     flex: 1 1 auto; 
   }
+
+
+
+  @media only screen and (max-width: 425px){
+    
+    .genres, .banner{
+        padding: 1rem;
+        
+    }
+    .banner .site-title{
+            padding-top: 1rem;
+            
+        }
+}

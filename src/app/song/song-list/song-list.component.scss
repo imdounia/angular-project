@@ -23,23 +23,12 @@ table tr:hover{
     background-color: #c09ba9;
     transform: scale(1.01);
 }
-/*.songs > div{
-    display: flex;
+
+
+@media only screen and (max-width: 425px){
+    
+    .songs{
+        padding: 1rem;
+        
+    }
 }
-.songs .actions{
-    text-align: right;
-    right: 0;
-}
-.songs .song{
-    background-color: #d993ad;
-    margin: 3rem 2rem;
-    padding: 0.5rem 1rem;
-    box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.30), 0 10px 20px 0 rgba(0, 0, 0, 0.30);
-    border-radius: 20px;
-    transition: transform 0.5s;
-    transition: 0.3s;
-}
-.songs .song:hover{
-    background-color: #c09ba9;
-    transform: scale(1.1);    
-}*/
