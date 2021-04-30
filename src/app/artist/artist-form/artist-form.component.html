@@ -1,1 +1,33 @@
-<p>artist-form works!</p>
+<form [formGroup]="artistForm" (ngSubmit)="onSubmit(artistForm.value)">
+    <h2 mat-dialog-title style="text-align: center;">Artist</h2>
+    <mat-dialog-content class="mat-typography">
+            <div>
+                <mat-form-field appearance="fill">
+                    <mat-label>Artist</mat-label>
+                    <input matInput placeholder="Artist" type="text" formControlName="name" required>
+                  </mat-form-field>
+            </div>
+    
+            <div>
+                <mat-form-field appearance="fill">
+                    <mat-label>Description</mat-label>
+                    <input matInput placeholder="Description" type="text" formControlName="description" required>
+                  </mat-form-field>
+            </div>
+    
+            <div>
+                <mat-form-field appearance="fill">
+                    <mat-label>Years active</mat-label>
+                    <input matInput placeholder="2020" type="number" formControlName="yearsactive" required>
+                  </mat-form-field>
+            </div>
+    
+    
+    </mat-dialog-content>
+    {{artistForm.valid}}
+    <mat-dialog-actions align="end">
+      <button mat-button mat-dialog-close>Cancel</button>
+      <button mat-button type="submit" cdkFocusInitial [disabled]="!artistForm.valid">{{formAction}}</button>
+    </mat-dialog-actions>
+    
+    </form>

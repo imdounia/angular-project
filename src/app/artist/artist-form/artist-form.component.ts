@@ -20,7 +20,7 @@ export class ArtistFormComponent implements OnInit {
     private fb: FormBuilder,
     private _artistService: ArtistService,
     private _dialogRef: MatDialogRef<ArtistFormComponent>,
-    @Inject(MAT_DIALOG_DATA) public data:ArtistFormData
+    @Inject(MAT_DIALOG_DATA) public data: ArtistFormData
   ) {
     this.formAction = data.toUpdate? "Update" : "Add";
 
@@ -28,14 +28,14 @@ export class ArtistFormComponent implements OnInit {
       this.artistForm = this.fb.group({
         name: [data.artist.name, [Validators.required, this.noWhitespaceValidator]],
         description: [data.artist.description, [Validators.required, this.noWhitespaceValidator]],
-        years_active: [data.artist.years_active, [Validators.required]]
+        yearsactive: [data.artist.yearsactive, [Validators.required]],
       })
     }
     else {
       this.artistForm = this.fb.group({
         name: ['', [Validators.required, this.noWhitespaceValidator]],
-        description: ['', [Validators.required, this.noWhitespaceValidator]],
-        years_active: ['', [Validators.required]]
+        description: ['', [Validators.required]],
+        yearsactive: ['2000', [Validators.required]]
       })
     }
 
@@ -50,7 +50,7 @@ export class ArtistFormComponent implements OnInit {
       if (this.data.toUpdate) {
         artist.id = this.data.artist.id;
         this._artistService.put(artist).subscribe((next) => {
-          console.log("dang bro WE HAVE updated A artist");
+          console.log("dang bro WE HAVE updated artist");
           this.artistForm.reset();
           this._dialogRef.close();
         })
@@ -72,5 +72,6 @@ export class ArtistFormComponent implements OnInit {
     const isValid = !isWhitespace;
     return isValid ? null : { 'whitespace': true };
   }
+
 
 }
