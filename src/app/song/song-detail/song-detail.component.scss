@@ -1,0 +1,29 @@
+.song-detail{
+    background-image: linear-gradient(to bottom, #a67db8, #d993ad, #f0b6ac, #f7dcc2);
+    padding: 6rem;
+}
+.song-detail .song{
+    background-color: #d993ad;
+    padding: 1rem;
+    box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.30), 0 10px 20px 0 rgba(0, 0, 0, 0.30);
+    border-radius: 20px;
+    transition: transform 0.5s;
+    transition: 0.3s;
+    margin: 4rem 0;
+}
+.song-detail .song p{
+    line-height: 30px;
+}
+.song-detail .song:hover{
+    background-color: #c09ba9;
+    transform: scale(1.1);    
+}
+
+
+@media only screen and (max-width: 425px){
+    
+    .song-detail{
+        padding: 1rem;
+        
+    }
+}

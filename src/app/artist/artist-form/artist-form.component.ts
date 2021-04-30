@@ -35,7 +35,7 @@ export class ArtistFormComponent implements OnInit {
       this.artistForm = this.fb.group({
         name: ['', [Validators.required, this.noWhitespaceValidator]],
         description: ['', [Validators.required]],
-        yearsactive: ['2000', [Validators.required]]
+        yearsactive: ['2021', [Validators.required]]
       })
     }
 

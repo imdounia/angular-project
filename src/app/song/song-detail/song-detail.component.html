@@ -1,2 +1,13 @@
-{{ song$ | async | json }}
-{{songId}}
+<section class="song-detail">
+    <h2 class="text-center p-2">{{(song$ | async )?.name}} detail</h2>
+        <div class="song text-center">
+            
+            <h4 style="font-weight: bold;"> Name : {{(song$ | async )?.name}}</h4>
+            <P>Id: {{songId}}</P>
+            <p>Artist : {{(song$ | async )?.artist}}</p>
+            <p>Genre : {{(song$ | async )?.genre}}</p>
+            <p>Wanna listen to it ? <a style="text-decoration: none; color: blueviolet;" href="{{(song$ | async )?.videourl}}">click here</a></p>
+
+            </div>
+    
+</section>
