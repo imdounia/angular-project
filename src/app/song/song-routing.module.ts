@@ -13,11 +13,12 @@ const routes: Routes = [
       {
         path: '',
         pathMatch: 'full',
-        redirectTo: ""
-      },
+        children: [
       {
-        path: 'songs',
+        path: '',
         component: SongListComponent
+      }
+    ]
       },
       {
         path: ':id',
