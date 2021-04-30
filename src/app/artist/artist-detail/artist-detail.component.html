@@ -1,2 +1,12 @@
-{{ artist$ | async | json }}
-{{artistId}}
+<section class="artist-detail">
+    <h2 class="text-center p-2">{{(artist$ | async )?.name}} detail</h2>
+        <div class="artist text-center">
+            
+            <h4 style="font-weight: bold;"> Name : {{(artist$ | async )?.name}}</h4>
+            <P>Id: {{artistId}}</P>
+            <p>Description : {{(artist$ | async )?.description}}</p>
+            <p>Years active : {{(artist$ | async )?.yearsactive}}</p>
+
+            </div>
+    
+</section>

@@ -6,7 +6,7 @@
             <P>Id: {{songId}}</P>
             <p>Artist : {{(song$ | async )?.artist}}</p>
             <p>Genre : {{(song$ | async )?.genre}}</p>
-            <p>Wanna listen to it ? <a style="text-decoration: none; color: blueviolet;" href="{{(song$ | async )?.videourl}}">click here</a></p>
+            <p>Wanna listen to it ? <a target="_blank" style="text-decoration: none; color: blueviolet;" href="{{(song$ | async )?.videourl}}">click here</a></p>
 
             </div>
     
