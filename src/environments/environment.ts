@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  songEndpoint: 'https://mywebsitee.herokuapp.com/songs',
-  artistEndpoint: 'https://mywebsitee.herokuapp.com/artists'
+  songEndpoint: 'https://music-beta-sooty.vercel.app/songs',
+  artistEndpoint: 'https://music-beta-sooty.vercel.app/artists'
 };
 /*
  * For easier debugging in development mode, you can import the following file
