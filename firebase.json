@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "ANGULARPROJECT",
+    "public": "dist",
     "ignore": [
       "firebase.json",
       "**/.*",
