@@ -1,6 +1,6 @@
-# ANGULARPROJECT
+# 🎶 K-Playlist: My Favorite Korean Songs & Artists 🇰🇷🎵
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.4.
+Welcome to **K-Playlist**, a personal Angular project where I share my favorite Korean songs and artists. This app allows me to **Create**, **Read**, **Update**, and **Delete** tracks and manage artists information from my own curated collection. If you're into K-pop or just curious, feel free to explore my playlist!
 
 ## Development server
 
